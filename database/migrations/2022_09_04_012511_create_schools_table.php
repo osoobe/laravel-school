@@ -20,7 +20,6 @@ class CreateSchoolsTable extends Migration
             $table->string('school_code')->nullable()->index();
             $table->string('phone_number', 15)->nullable();
             $table->string('website')->nullable();
-            $table->string('address', 500)->nullable();
             $table->string('logo')->nullable();
             $table->text('description')->nullable();
             $table->string('slug')->nullable()->unique();
