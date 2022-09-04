@@ -1,0 +1,41 @@
+{
+    "name": "osoobe/school",
+    "description": "A description for school.",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Oshane Bailey",
+            "email": "oshane@osoobe.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Osoobe\\School\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Osoobe\\School\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Osoobe\\School\\SchoolServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    }
+}
