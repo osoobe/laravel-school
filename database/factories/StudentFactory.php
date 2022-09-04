@@ -1,6 +1,6 @@
 <?php
 
-// namespace Osoobe\School\Database\Factories;
+namespace Osoobe\School\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Osoobe\School\Models\Student;
