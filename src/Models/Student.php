@@ -5,28 +5,38 @@ namespace Osoobe\School\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Osoobe\LaravelTraits\Support\HasSlug as SupportHasSlug;
+use Osoobe\LaravelTraits\Support\TimeDiff;
+use Osoobe\School\Traits\HasPackageFactory;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
-class School extends Model
+class Student extends Model
 {
-    use HasFactory;
+    use HasPackageFactory;
+    // use HasFactory;
     use HasSlug;
     use SupportHasSlug;
+    use TimeDiff;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
-        'name',
+        'first_name',
+        'middle_name',
+        'last_name',
         'email',
-        'school_code',
-        'phone_no',
-        'website',
-        'logo',
-        'slug'
+        'school_id',
+        'user_id',
+        'gender',
+        'grade',
+        'form_class',
+        'phone_number',
+        'dob',
+        'status',
+        'description'
+    ];
+
+    protected $dates = [
+        'dob'
     ];
 
     /**
@@ -37,13 +47,6 @@ class School extends Model
         return SlugOptions::create()
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug');
-    }
-
-
-
-    // Scope queries
-    public function scopeSchoolCode($query, $code) {
-        return $query->where('school_code', $code);
     }
 
 

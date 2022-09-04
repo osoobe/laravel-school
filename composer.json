@@ -18,11 +18,13 @@
     },
     "autoload": {
         "psr-4": {
+            "Osoobe\\School\\Database\\Factories": "./database/factories",
             "Osoobe\\School\\": "./src"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "Osoobe\\School\\Database\\Factories": "./database/factories",
             "Osoobe\\School\\Tests\\": "tests"
         }
     },
